@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/fleur
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/fleur/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/MNL_Config.xml \
     vendor/xiaomi/fleur/proprietary/vendor/etc/apdb/APDB_MT6785_S01__W2248:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6785_S01__W2248 \
     vendor/xiaomi/fleur/proprietary/vendor/etc/apdb/APDB_MT6785_S01__W2248_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6785_S01__W2248_ENUM \
@@ -177,7 +176,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
-    vendor/xiaomi/fleur/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/android.hardware.tetheroffload-V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tetheroffload-V1-service.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
@@ -204,8 +202,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent-service.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc \
+    vendor/xiaomi/fleur/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc \
+    vendor/xiaomi/fleur/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
+    vendor/xiaomi/fleur/proprietary/vendor/etc/init/volte_rcs_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_rcs_ua.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/vpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vpud.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/xiaomi/fleur/proprietary/vendor/etc/ipsec/ipsec.conf:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.conf \
@@ -213,8 +214,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/fleur/proprietary/vendor/etc/ipsec/strongswan.conf:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/strongswan.conf \
     vendor/xiaomi/fleur/proprietary/vendor/etc/mpe.conf:$(TARGET_COPY_OUT_VENDOR)/etc/mpe.conf \
     vendor/xiaomi/fleur/proprietary/vendor/etc/screen_light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/screen_light.xml \
-    vendor/xiaomi/fleur/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
-    vendor/xiaomi/fleur/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
     vendor/xiaomi/fleur/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/xiaomi/fleur/proprietary/vendor/etc/smartpa_param/fsmsdg_params.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param/fsmsdg_params.bin \
     vendor/xiaomi/fleur/proprietary/vendor/etc/smsdbvisitor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/smsdbvisitor.xml \
@@ -353,6 +352,7 @@ PRODUCT_PACKAGES += \
     libmtklimiter_vendor \
     libmtkshifter_vendor \
     libnxp_extamp_intf \
+    librcs_volte_core \
     librt_extamp_intf \
     libspeech_enh_lib \
     libspeechparser_vendor \
@@ -366,8 +366,7 @@ PRODUCT_PACKAGES += \
     libvpud_vcodec \
     libvt_custom \
     vendor.mediatek.hardware.audio@7.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
+    vendor.mediatek.hardware.rcs@2.0 \
     APUWareUtilsAidlServer \
     AVCSecureVdecCA \
     HEVCSecureVdecCA \
@@ -404,6 +403,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.postproc@1.0-impl \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
+    vendor.mediatek.hardware.pq@2.15-impl \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
     vulkan.mali \
     imx355_ultra_ofilm_mipi_raw_IdxMgr \
@@ -889,6 +889,10 @@ PRODUCT_PACKAGES += \
     lib_bsscore \
     libaaa_ltm \
     libaaa_ltmx \
+    libaal_cust \
+    libaal_key \
+    libaal_mtk \
+    libaalservice \
     libaiawb_moon \
     libaiawb_moon_model \
     libaiawb_p1ggm \
@@ -897,6 +901,7 @@ PRODUCT_PACKAGES += \
     libalCFR \
     libanc_dc_base \
     libanc_dc_plugin_xiaomi_v2 \
+    libappgamepq \
     libapu_mdw \
     libarcsoft_beautyshot \
     libarcsoft_hdr_detection \
@@ -1137,7 +1142,11 @@ PRODUCT_PACKAGES += \
     libnotifyaudiohal \
     liboemcrypto \
     libpixelflinger \
+    libpq_cust_base \
     libpq_prot \
+    libpqframework \
+    libpqparamparser \
+    libpqpconfig \
     libratconfig \
     libremosaic_wrapper \
     libremosaiclib \
@@ -1205,6 +1214,8 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.clientapi@1.0 \
     vendor.mediatek.hardware.composer_ext@1.0 \
     vendor.mediatek.hardware.mmagent-V1-ndk \
+    vendor.mediatek.hardware.mmagent@1.0 \
+    vendor.mediatek.hardware.mmagent@1.1 \
     vendor.mediatek.hardware.mms@1.0 \
     vendor.mediatek.hardware.mms@1.1 \
     vendor.mediatek.hardware.mms@1.2 \
@@ -1214,7 +1225,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mms@1.6 \
     vendor.mediatek.hardware.mtkradioex@2.0 \
     vendor.mediatek.hardware.mtkradioex@3.0 \
-    vendor.mediatek.hardware.netdagent-V1-ndk \
     vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.nvram@1.0 \
     vendor.mediatek.hardware.nvram@1.1 \
@@ -1240,39 +1250,13 @@ PRODUCT_PACKAGES += \
     vendor.microtrust.hardware.soter@1.0 \
     vendor.microtrust.hardware.thh@2.0 \
     wechat.beanpod \
-    libcomutils \
-    libimsma \
-    libimsma_adapt \
-    libimsma_rtp \
-    libimsma_socketwrapper \
-    libmtk_vt_service \
-    libmtk_vt_wrapper \
-    libsignal \
-    libsink-mtk \
-    libsource \
-    libvcodec_cap \
-    libvcodec_capenc \
-    libvt_avsync \
-    vendor.mediatek.hardware.videotelephony-V1-ndk \
-    vendor.mediatek.hardware.videotelephony@1.0 \
     SoterService \
-    ImsService \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-ims-extension-plugin \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common \
-    CommandService.xml \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
     android.hardware.tetheroffload-V1-service.xml \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
     manifest_android.hardware.drm-service.widevine.xml \
     manifest_apuware_utils_aidl.xml \
-    manifest_media_c2_V1_2_default.xml \
     manifest_thh.xml \
     batterysecret \
     bp_kmsetkey_ca \
@@ -1285,7 +1269,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-service.mediatek \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
-    android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks-shim-service-mtk-legacy \
     camerahalserver \
     mtkfusionrild \
@@ -1293,6 +1276,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mms@1.6-service \
     vendor.mediatek.hardware.nvram@1.1-service \
+    vendor.mediatek.hardware.pq@2.2-service \
     vendor.microtrust.hardware.soter@1.0-service \
     vendor.microtrust.hardware.thh@2.0-service \
     vtservice_hidl \
@@ -1307,15 +1291,17 @@ PRODUCT_PACKAGES += \
     mtk_agpsd \
     netdagent \
     nvram_daemon \
+    rcs_volte_stack \
     rt5512_calibration \
     teei_daemon \
+    volte_clientapi_ua \
     volte_imcb \
     volte_imsm_93 \
     volte_md_status \
+    volte_rcs_ua \
     volte_stack \
     volte_ua \
     vpud \
     wlan_assistant \
     wmt_launcher \
-    wmt_loader \
-    vtservice
+    wmt_loader
